@@ -1,4 +1,4 @@
-package com.jmath.linearalgebra;
+package com.jmath.main;
 
 /**
  * Enum that tells what operation to do

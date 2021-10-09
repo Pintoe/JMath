@@ -1,4 +1,4 @@
-package com.jmath.linearalgebra;
+package com.jmath.main;
 
 /**
  * Class to create Matrix objects

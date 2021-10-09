@@ -1,4 +1,4 @@
-package com.jmath.linearalgebra;
+package com.jmath.main;
 
 public class AugmentedMatrix extends Matrix {
 
