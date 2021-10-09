@@ -154,10 +154,6 @@ public class Matrix {
     public Matrix getProductMatrix(Matrix other) {
 
         Matrix finalMatrix = new Matrix(this.sizeN, other.sizeM);
-        this.printDimensions();
-        other.printDimensions();
-        finalMatrix.clearValues();
-        finalMatrix.printValues();
 
         for (int n = 0; n < this.sizeN; n++) { // row
 
