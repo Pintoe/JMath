@@ -211,6 +211,13 @@ public class Matrix {
         return new Matrix(transposedValues);
     }
 
+    /**
+     * Gets a Matrix that ignores the rows and columns specified
+     *
+     * @param rowToIgnore       Index of row to ignore
+     * @param columnToIgnore    Index of column to ignore
+     * @return                  n-1 by m-1 Matrix object with the specified row and column ignored
+     */
     public Matrix getModifiedMatrix(int rowToIgnore, int columnToIgnore) {
         Matrix modifiedMatrix = new Matrix(this.sizeN-1, this.sizeM-1);
 
@@ -231,6 +238,11 @@ public class Matrix {
         return modifiedMatrix;
     }
 
+    /**
+     * Gets the matrix of cofactors
+     *
+     * @return      Calculated matrix of cofactors of the current object's components
+     */
     public Matrix getMatrixOfCofactors() {
         Matrix matrixOfCofactors = new Matrix(this.components);
 
@@ -244,6 +256,11 @@ public class Matrix {
         return matrixOfCofactors;
     }
 
+    /**
+     * Gets the inverse matrix
+     *
+     * @return Inverse matrix of the current object's components
+     */
     public Matrix getInverseMatrix() {
         double det;
 
@@ -354,6 +371,12 @@ public class Matrix {
         return sum;
     }
 
+    /**
+     * Recursively calculates the determinant of the current object's components
+     *
+     * @param currentMatrix     Matrix to calculate the determinant of
+     * @return                  Determinant of the current object
+     */
     private double calculateDeterminant(Matrix currentMatrix) {
         if (currentMatrix.sizeN != 2) {
 
