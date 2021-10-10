@@ -1,8 +1,8 @@
-package com.jmath.main;
+package com.jmath.main.linearalgebra;
 
 /**
  * Enum that tells what operation to do
  */
-public enum Operation {
+enum Operation {
     ADD, SUBTRACT
 }

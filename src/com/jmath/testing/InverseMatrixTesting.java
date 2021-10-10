@@ -1,6 +1,6 @@
 package com.jmath.testing;
 
-import com.jmath.main.Matrix;
+import com.jmath.main.linearalgebra.Matrix;
 
 public class InverseMatrixTesting {
     public static void main(String[] args) {
@@ -18,5 +18,6 @@ public class InverseMatrixTesting {
 
         System.out.println("Proof: ");
         inverse.getProductMatrix(exampleMatrix).printValues();
+
     }
 }

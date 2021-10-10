@@ -1,4 +1,4 @@
-package com.jmath.main;
+package com.jmath.main.linearalgebra;
 
 /**
  * Class to create Matrix objects
@@ -279,14 +279,15 @@ public class Matrix {
         }
 
         Matrix minorMatrix = new Matrix(this.sizeN, this.sizeM);
+        double inverseDeterminant = 1/det;
 
         for (int n = 0; n < this.sizeN; n++) {
             for (int m = 0; m < this.sizeM; m++) {
-                minorMatrix.set(n, m, calculateDeterminant(this.getModifiedMatrix(n, m)));
+                minorMatrix.set(n, m, calculateDeterminant(this.getModifiedMatrix(n, m))*Math.pow(-1, n+m)*inverseDeterminant);
             }
         }
 
-        return minorMatrix.getMatrixOfCofactors().getTransposedMatrix().getProductMatrix(1/det);
+        return minorMatrix;
     }
 
     /**
@@ -390,7 +391,8 @@ public class Matrix {
 
             return determinant;
         } else {
-            return currentMatrix.get(0, 0)*currentMatrix.get(1, 1) - currentMatrix.get(0, 1)*currentMatrix.get(1, 0);
+            return currentMatrix.get(0, 0)*currentMatrix.get(1, 1)
+                    -currentMatrix.get(0, 1)*currentMatrix.get(1, 0);
         }
 
     }
