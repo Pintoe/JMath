@@ -49,6 +49,7 @@ public class Matrix {
      * @return          Sum/Difference of the two matrices
      */
     private Matrix simpleOperation(Matrix other, Operation command) {
+        // TODO: Add Error Checking
         Matrix endMatrix = new Matrix(this.sizeN, this.sizeM);
         boolean addValues = command == Operation.ADD;
 
@@ -153,6 +154,7 @@ public class Matrix {
      */
     public Matrix getProductMatrix(Matrix other) {
 
+        // TODO: Add Error Checking
         Matrix finalMatrix = new Matrix(this.sizeN, other.sizeM);
 
         for (int n = 0; n < this.sizeN; n++) { // row
@@ -260,10 +262,12 @@ public class Matrix {
     public Matrix getInverseMatrix() {
         double det;
 
+        // TODO: Throw Exception
         if (!this.isSquare()) {
             return null;
         } else {
             det = this.calculateDeterminant();
+            // TODO: Throw Exception
             if (det == 0) {
                 return null;
             }
@@ -357,6 +361,7 @@ public class Matrix {
      * @return      Trace value
      */
     public double calculateTrace() {
+        // TODO: Throw Exception
         if (!this.isSquare()) return 0;
 
         double sum = 0;
@@ -403,6 +408,7 @@ public class Matrix {
      * @return      Determinant of the component array
      */
     public double calculateDeterminant() {
+        // TODO: Throw Exception
         if (!this.isSquare()) return 0;
 
         return calculateDeterminant(this);
