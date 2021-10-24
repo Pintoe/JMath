@@ -1,4 +1,4 @@
-package com.jmath.testing;
+package com.jmath.testing.linearalgebra;
 
 import com.jmath.main.linearalgebra.Matrix;
 
